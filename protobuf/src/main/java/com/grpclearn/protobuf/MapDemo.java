@@ -21,6 +21,7 @@ public class MapDemo {
 		Dealer dealer = Dealer.newBuilder().putModel(2020, accord).putModel(2005, civic).build();
 		System.out.println(dealer);
 		System.out.println(dealer.getModelCount());
+		System.out.println(dealer.getModelOrThrow(2005).getBodyStyle());
 
 	}
 

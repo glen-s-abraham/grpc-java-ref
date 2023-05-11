@@ -4,11 +4,11 @@
 package com.grpclelarn.models;
 
 /**
- * Protobuf type {@code com.grpclelarn.models.Person}
+ * Protobuf type {@code Person}
  */
 public  final class Person extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:com.grpclelarn.models.Person)
+    // @@protoc_insertion_point(message_implements:Person)
     PersonOrBuilder {
   // Use Person.newBuilder() to construct.
   private Person(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
@@ -94,12 +94,12 @@ public  final class Person extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.grpclelarn.models.PersonOuterClass.internal_static_com_grpclelarn_models_Person_descriptor;
+    return com.grpclelarn.models.PersonOuterClass.internal_static_Person_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.grpclelarn.models.PersonOuterClass.internal_static_com_grpclelarn_models_Person_fieldAccessorTable
+    return com.grpclelarn.models.PersonOuterClass.internal_static_Person_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.grpclelarn.models.Person.class, com.grpclelarn.models.Person.Builder.class);
   }
@@ -151,19 +151,19 @@ public  final class Person extends
   public static final int ADDRESS_FIELD_NUMBER = 3;
   private com.grpclelarn.models.Address address_;
   /**
-   * <code>.com.grpclelarn.models.Address address = 3;</code>
+   * <code>.common.Address address = 3;</code>
    */
   public boolean hasAddress() {
     return address_ != null;
   }
   /**
-   * <code>.com.grpclelarn.models.Address address = 3;</code>
+   * <code>.common.Address address = 3;</code>
    */
   public com.grpclelarn.models.Address getAddress() {
     return address_ == null ? com.grpclelarn.models.Address.getDefaultInstance() : address_;
   }
   /**
-   * <code>.com.grpclelarn.models.Address address = 3;</code>
+   * <code>.common.Address address = 3;</code>
    */
   public com.grpclelarn.models.AddressOrBuilder getAddressOrBuilder() {
     return getAddress();
@@ -172,32 +172,32 @@ public  final class Person extends
   public static final int CAR_FIELD_NUMBER = 4;
   private java.util.List<com.grpclelarn.models.Car> car_;
   /**
-   * <code>repeated .com.grpclelarn.models.Car car = 4;</code>
+   * <code>repeated .common.Car car = 4;</code>
    */
   public java.util.List<com.grpclelarn.models.Car> getCarList() {
     return car_;
   }
   /**
-   * <code>repeated .com.grpclelarn.models.Car car = 4;</code>
+   * <code>repeated .common.Car car = 4;</code>
    */
   public java.util.List<? extends com.grpclelarn.models.CarOrBuilder> 
       getCarOrBuilderList() {
     return car_;
   }
   /**
-   * <code>repeated .com.grpclelarn.models.Car car = 4;</code>
+   * <code>repeated .common.Car car = 4;</code>
    */
   public int getCarCount() {
     return car_.size();
   }
   /**
-   * <code>repeated .com.grpclelarn.models.Car car = 4;</code>
+   * <code>repeated .common.Car car = 4;</code>
    */
   public com.grpclelarn.models.Car getCar(int index) {
     return car_.get(index);
   }
   /**
-   * <code>repeated .com.grpclelarn.models.Car car = 4;</code>
+   * <code>repeated .common.Car car = 4;</code>
    */
   public com.grpclelarn.models.CarOrBuilder getCarOrBuilder(
       int index) {
@@ -393,20 +393,20 @@ public  final class Person extends
     return builder;
   }
   /**
-   * Protobuf type {@code com.grpclelarn.models.Person}
+   * Protobuf type {@code Person}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:com.grpclelarn.models.Person)
+      // @@protoc_insertion_point(builder_implements:Person)
       com.grpclelarn.models.PersonOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.grpclelarn.models.PersonOuterClass.internal_static_com_grpclelarn_models_Person_descriptor;
+      return com.grpclelarn.models.PersonOuterClass.internal_static_Person_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.grpclelarn.models.PersonOuterClass.internal_static_com_grpclelarn_models_Person_fieldAccessorTable
+      return com.grpclelarn.models.PersonOuterClass.internal_static_Person_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.grpclelarn.models.Person.class, com.grpclelarn.models.Person.Builder.class);
     }
@@ -450,7 +450,7 @@ public  final class Person extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.grpclelarn.models.PersonOuterClass.internal_static_com_grpclelarn_models_Person_descriptor;
+      return com.grpclelarn.models.PersonOuterClass.internal_static_Person_descriptor;
     }
 
     public com.grpclelarn.models.Person getDefaultInstanceForType() {
@@ -689,13 +689,13 @@ public  final class Person extends
     private com.google.protobuf.SingleFieldBuilderV3<
         com.grpclelarn.models.Address, com.grpclelarn.models.Address.Builder, com.grpclelarn.models.AddressOrBuilder> addressBuilder_;
     /**
-     * <code>.com.grpclelarn.models.Address address = 3;</code>
+     * <code>.common.Address address = 3;</code>
      */
     public boolean hasAddress() {
       return addressBuilder_ != null || address_ != null;
     }
     /**
-     * <code>.com.grpclelarn.models.Address address = 3;</code>
+     * <code>.common.Address address = 3;</code>
      */
     public com.grpclelarn.models.Address getAddress() {
       if (addressBuilder_ == null) {
@@ -705,7 +705,7 @@ public  final class Person extends
       }
     }
     /**
-     * <code>.com.grpclelarn.models.Address address = 3;</code>
+     * <code>.common.Address address = 3;</code>
      */
     public Builder setAddress(com.grpclelarn.models.Address value) {
       if (addressBuilder_ == null) {
@@ -721,7 +721,7 @@ public  final class Person extends
       return this;
     }
     /**
-     * <code>.com.grpclelarn.models.Address address = 3;</code>
+     * <code>.common.Address address = 3;</code>
      */
     public Builder setAddress(
         com.grpclelarn.models.Address.Builder builderForValue) {
@@ -735,7 +735,7 @@ public  final class Person extends
       return this;
     }
     /**
-     * <code>.com.grpclelarn.models.Address address = 3;</code>
+     * <code>.common.Address address = 3;</code>
      */
     public Builder mergeAddress(com.grpclelarn.models.Address value) {
       if (addressBuilder_ == null) {
@@ -753,7 +753,7 @@ public  final class Person extends
       return this;
     }
     /**
-     * <code>.com.grpclelarn.models.Address address = 3;</code>
+     * <code>.common.Address address = 3;</code>
      */
     public Builder clearAddress() {
       if (addressBuilder_ == null) {
@@ -767,7 +767,7 @@ public  final class Person extends
       return this;
     }
     /**
-     * <code>.com.grpclelarn.models.Address address = 3;</code>
+     * <code>.common.Address address = 3;</code>
      */
     public com.grpclelarn.models.Address.Builder getAddressBuilder() {
       
@@ -775,7 +775,7 @@ public  final class Person extends
       return getAddressFieldBuilder().getBuilder();
     }
     /**
-     * <code>.com.grpclelarn.models.Address address = 3;</code>
+     * <code>.common.Address address = 3;</code>
      */
     public com.grpclelarn.models.AddressOrBuilder getAddressOrBuilder() {
       if (addressBuilder_ != null) {
@@ -786,7 +786,7 @@ public  final class Person extends
       }
     }
     /**
-     * <code>.com.grpclelarn.models.Address address = 3;</code>
+     * <code>.common.Address address = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.grpclelarn.models.Address, com.grpclelarn.models.Address.Builder, com.grpclelarn.models.AddressOrBuilder> 
@@ -815,7 +815,7 @@ public  final class Person extends
         com.grpclelarn.models.Car, com.grpclelarn.models.Car.Builder, com.grpclelarn.models.CarOrBuilder> carBuilder_;
 
     /**
-     * <code>repeated .com.grpclelarn.models.Car car = 4;</code>
+     * <code>repeated .common.Car car = 4;</code>
      */
     public java.util.List<com.grpclelarn.models.Car> getCarList() {
       if (carBuilder_ == null) {
@@ -825,7 +825,7 @@ public  final class Person extends
       }
     }
     /**
-     * <code>repeated .com.grpclelarn.models.Car car = 4;</code>
+     * <code>repeated .common.Car car = 4;</code>
      */
     public int getCarCount() {
       if (carBuilder_ == null) {
@@ -835,7 +835,7 @@ public  final class Person extends
       }
     }
     /**
-     * <code>repeated .com.grpclelarn.models.Car car = 4;</code>
+     * <code>repeated .common.Car car = 4;</code>
      */
     public com.grpclelarn.models.Car getCar(int index) {
       if (carBuilder_ == null) {
@@ -845,7 +845,7 @@ public  final class Person extends
       }
     }
     /**
-     * <code>repeated .com.grpclelarn.models.Car car = 4;</code>
+     * <code>repeated .common.Car car = 4;</code>
      */
     public Builder setCar(
         int index, com.grpclelarn.models.Car value) {
@@ -862,7 +862,7 @@ public  final class Person extends
       return this;
     }
     /**
-     * <code>repeated .com.grpclelarn.models.Car car = 4;</code>
+     * <code>repeated .common.Car car = 4;</code>
      */
     public Builder setCar(
         int index, com.grpclelarn.models.Car.Builder builderForValue) {
@@ -876,7 +876,7 @@ public  final class Person extends
       return this;
     }
     /**
-     * <code>repeated .com.grpclelarn.models.Car car = 4;</code>
+     * <code>repeated .common.Car car = 4;</code>
      */
     public Builder addCar(com.grpclelarn.models.Car value) {
       if (carBuilder_ == null) {
@@ -892,7 +892,7 @@ public  final class Person extends
       return this;
     }
     /**
-     * <code>repeated .com.grpclelarn.models.Car car = 4;</code>
+     * <code>repeated .common.Car car = 4;</code>
      */
     public Builder addCar(
         int index, com.grpclelarn.models.Car value) {
@@ -909,7 +909,7 @@ public  final class Person extends
       return this;
     }
     /**
-     * <code>repeated .com.grpclelarn.models.Car car = 4;</code>
+     * <code>repeated .common.Car car = 4;</code>
      */
     public Builder addCar(
         com.grpclelarn.models.Car.Builder builderForValue) {
@@ -923,7 +923,7 @@ public  final class Person extends
       return this;
     }
     /**
-     * <code>repeated .com.grpclelarn.models.Car car = 4;</code>
+     * <code>repeated .common.Car car = 4;</code>
      */
     public Builder addCar(
         int index, com.grpclelarn.models.Car.Builder builderForValue) {
@@ -937,7 +937,7 @@ public  final class Person extends
       return this;
     }
     /**
-     * <code>repeated .com.grpclelarn.models.Car car = 4;</code>
+     * <code>repeated .common.Car car = 4;</code>
      */
     public Builder addAllCar(
         java.lang.Iterable<? extends com.grpclelarn.models.Car> values) {
@@ -952,7 +952,7 @@ public  final class Person extends
       return this;
     }
     /**
-     * <code>repeated .com.grpclelarn.models.Car car = 4;</code>
+     * <code>repeated .common.Car car = 4;</code>
      */
     public Builder clearCar() {
       if (carBuilder_ == null) {
@@ -965,7 +965,7 @@ public  final class Person extends
       return this;
     }
     /**
-     * <code>repeated .com.grpclelarn.models.Car car = 4;</code>
+     * <code>repeated .common.Car car = 4;</code>
      */
     public Builder removeCar(int index) {
       if (carBuilder_ == null) {
@@ -978,14 +978,14 @@ public  final class Person extends
       return this;
     }
     /**
-     * <code>repeated .com.grpclelarn.models.Car car = 4;</code>
+     * <code>repeated .common.Car car = 4;</code>
      */
     public com.grpclelarn.models.Car.Builder getCarBuilder(
         int index) {
       return getCarFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .com.grpclelarn.models.Car car = 4;</code>
+     * <code>repeated .common.Car car = 4;</code>
      */
     public com.grpclelarn.models.CarOrBuilder getCarOrBuilder(
         int index) {
@@ -995,7 +995,7 @@ public  final class Person extends
       }
     }
     /**
-     * <code>repeated .com.grpclelarn.models.Car car = 4;</code>
+     * <code>repeated .common.Car car = 4;</code>
      */
     public java.util.List<? extends com.grpclelarn.models.CarOrBuilder> 
          getCarOrBuilderList() {
@@ -1006,14 +1006,14 @@ public  final class Person extends
       }
     }
     /**
-     * <code>repeated .com.grpclelarn.models.Car car = 4;</code>
+     * <code>repeated .common.Car car = 4;</code>
      */
     public com.grpclelarn.models.Car.Builder addCarBuilder() {
       return getCarFieldBuilder().addBuilder(
           com.grpclelarn.models.Car.getDefaultInstance());
     }
     /**
-     * <code>repeated .com.grpclelarn.models.Car car = 4;</code>
+     * <code>repeated .common.Car car = 4;</code>
      */
     public com.grpclelarn.models.Car.Builder addCarBuilder(
         int index) {
@@ -1021,7 +1021,7 @@ public  final class Person extends
           index, com.grpclelarn.models.Car.getDefaultInstance());
     }
     /**
-     * <code>repeated .com.grpclelarn.models.Car car = 4;</code>
+     * <code>repeated .common.Car car = 4;</code>
      */
     public java.util.List<com.grpclelarn.models.Car.Builder> 
          getCarBuilderList() {
@@ -1052,10 +1052,10 @@ public  final class Person extends
     }
 
 
-    // @@protoc_insertion_point(builder_scope:com.grpclelarn.models.Person)
+    // @@protoc_insertion_point(builder_scope:Person)
   }
 
-  // @@protoc_insertion_point(class_scope:com.grpclelarn.models.Person)
+  // @@protoc_insertion_point(class_scope:Person)
   private static final com.grpclelarn.models.Person DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new com.grpclelarn.models.Person();

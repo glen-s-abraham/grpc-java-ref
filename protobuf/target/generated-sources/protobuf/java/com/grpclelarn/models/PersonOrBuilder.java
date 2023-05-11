@@ -4,7 +4,7 @@
 package com.grpclelarn.models;
 
 public interface PersonOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:com.grpclelarn.models.Person)
+    // @@protoc_insertion_point(interface_extends:Person)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -23,38 +23,38 @@ public interface PersonOrBuilder extends
   int getAge();
 
   /**
-   * <code>.com.grpclelarn.models.Address address = 3;</code>
+   * <code>.common.Address address = 3;</code>
    */
   boolean hasAddress();
   /**
-   * <code>.com.grpclelarn.models.Address address = 3;</code>
+   * <code>.common.Address address = 3;</code>
    */
   com.grpclelarn.models.Address getAddress();
   /**
-   * <code>.com.grpclelarn.models.Address address = 3;</code>
+   * <code>.common.Address address = 3;</code>
    */
   com.grpclelarn.models.AddressOrBuilder getAddressOrBuilder();
 
   /**
-   * <code>repeated .com.grpclelarn.models.Car car = 4;</code>
+   * <code>repeated .common.Car car = 4;</code>
    */
   java.util.List<com.grpclelarn.models.Car> 
       getCarList();
   /**
-   * <code>repeated .com.grpclelarn.models.Car car = 4;</code>
+   * <code>repeated .common.Car car = 4;</code>
    */
   com.grpclelarn.models.Car getCar(int index);
   /**
-   * <code>repeated .com.grpclelarn.models.Car car = 4;</code>
+   * <code>repeated .common.Car car = 4;</code>
    */
   int getCarCount();
   /**
-   * <code>repeated .com.grpclelarn.models.Car car = 4;</code>
+   * <code>repeated .common.Car car = 4;</code>
    */
   java.util.List<? extends com.grpclelarn.models.CarOrBuilder> 
       getCarOrBuilderList();
   /**
-   * <code>repeated .com.grpclelarn.models.Car car = 4;</code>
+   * <code>repeated .common.Car car = 4;</code>
    */
   com.grpclelarn.models.CarOrBuilder getCarOrBuilder(
       int index);
