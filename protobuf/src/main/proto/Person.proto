@@ -11,7 +11,13 @@ option java_package="com.grpclelarn.models";
 
 
 message Person{
-	string name=1;
+	//1-15 - 1 bytes - use for frequently used fields.
+	//16-2047 - 2 bytes - use for not that frequent fields.
+	//1 is smallest
+	//2^29-1
+	//19000-19999 -reserved
+	//Do not change field number once it's in use
+	string name=1;//1 is tag.
 	int32 age=2;
 	common.Address address =3;
 	repeated common.Car car=4;
@@ -20,3 +26,4 @@ message Person{
 
 
 
+//name:glen -- is mapped as--> 1:glen.
