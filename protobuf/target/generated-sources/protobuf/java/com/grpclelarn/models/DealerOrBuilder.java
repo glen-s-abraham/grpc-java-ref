@@ -31,9 +31,11 @@ public interface DealerOrBuilder extends
    * <code>map&lt;int32, .common.Car&gt; model = 1;</code>
    */
 
-  com.grpclelarn.models.Car getModelOrDefault(
+  /* nullable */
+com.grpclelarn.models.Car getModelOrDefault(
       int key,
-      com.grpclelarn.models.Car defaultValue);
+      /* nullable */
+com.grpclelarn.models.Car defaultValue);
   /**
    * <code>map&lt;int32, .common.Car&gt; model = 1;</code>
    */

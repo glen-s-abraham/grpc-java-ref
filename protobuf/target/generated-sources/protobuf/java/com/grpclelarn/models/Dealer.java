@@ -6,10 +6,11 @@ package com.grpclelarn.models;
 /**
  * Protobuf type {@code common.Dealer}
  */
-public  final class Dealer extends
+public final class Dealer extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:common.Dealer)
     DealerOrBuilder {
+private static final long serialVersionUID = 0L;
   // Use Dealer.newBuilder() to construct.
   private Dealer(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
@@ -18,53 +19,16 @@ public  final class Dealer extends
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new Dealer();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
-    return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
-  }
-  private Dealer(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    int mutable_bitField0_ = 0;
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          default: {
-            if (!input.skipField(tag)) {
-              done = true;
-            }
-            break;
-          }
-          case 10: {
-            if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-              model_ = com.google.protobuf.MapField.newMapField(
-                  ModelDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00000001;
-            }
-            com.google.protobuf.MapEntry<java.lang.Integer, com.grpclelarn.models.Car>
-            model__ = input.readMessage(
-                ModelDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-            model_.getMutableMap().put(
-                model__.getKey(), model__.getValue());
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      makeExtensionsImmutable();
-    }
+    return this.unknownFields;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
@@ -72,6 +36,7 @@ public  final class Dealer extends
   }
 
   @SuppressWarnings({"rawtypes"})
+  @java.lang.Override
   protected com.google.protobuf.MapField internalGetMapField(
       int number) {
     switch (number) {
@@ -82,6 +47,7 @@ public  final class Dealer extends
             "Invalid map field number: " + number);
     }
   }
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
     return com.grpclelarn.models.DealerOuterClass.internal_static_common_Dealer_fieldAccessorTable
@@ -119,6 +85,7 @@ public  final class Dealer extends
    * <code>map&lt;int32, .common.Car&gt; model = 1;</code>
    */
 
+  @java.lang.Override
   public boolean containsModel(
       int key) {
     
@@ -127,6 +94,7 @@ public  final class Dealer extends
   /**
    * Use {@link #getModelMap()} instead.
    */
+  @java.lang.Override
   @java.lang.Deprecated
   public java.util.Map<java.lang.Integer, com.grpclelarn.models.Car> getModel() {
     return getModelMap();
@@ -134,6 +102,7 @@ public  final class Dealer extends
   /**
    * <code>map&lt;int32, .common.Car&gt; model = 1;</code>
    */
+  @java.lang.Override
 
   public java.util.Map<java.lang.Integer, com.grpclelarn.models.Car> getModelMap() {
     return internalGetModel().getMap();
@@ -141,6 +110,7 @@ public  final class Dealer extends
   /**
    * <code>map&lt;int32, .common.Car&gt; model = 1;</code>
    */
+  @java.lang.Override
 
   public com.grpclelarn.models.Car getModelOrDefault(
       int key,
@@ -153,6 +123,7 @@ public  final class Dealer extends
   /**
    * <code>map&lt;int32, .common.Car&gt; model = 1;</code>
    */
+  @java.lang.Override
 
   public com.grpclelarn.models.Car getModelOrThrow(
       int key) {
@@ -166,6 +137,7 @@ public  final class Dealer extends
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -175,6 +147,7 @@ public  final class Dealer extends
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     com.google.protobuf.GeneratedMessageV3
@@ -183,8 +156,10 @@ public  final class Dealer extends
         internalGetModel(),
         ModelDefaultEntryHolder.defaultEntry,
         1);
+    getUnknownFields().writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -200,11 +175,11 @@ public  final class Dealer extends
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, model__);
     }
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
 
-  private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
@@ -215,10 +190,10 @@ public  final class Dealer extends
     }
     com.grpclelarn.models.Dealer other = (com.grpclelarn.models.Dealer) obj;
 
-    boolean result = true;
-    result = result && internalGetModel().equals(
-        other.internalGetModel());
-    return result;
+    if (!internalGetModel().equals(
+        other.internalGetModel())) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -232,7 +207,7 @@ public  final class Dealer extends
       hash = (37 * hash) + MODEL_FIELD_NUMBER;
       hash = (53 * hash) + internalGetModel().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -307,6 +282,7 @@ public  final class Dealer extends
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -314,6 +290,7 @@ public  final class Dealer extends
   public static Builder newBuilder(com.grpclelarn.models.Dealer prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -359,6 +336,7 @@ public  final class Dealer extends
               "Invalid map field number: " + number);
       }
     }
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.grpclelarn.models.DealerOuterClass.internal_static_common_Dealer_fieldAccessorTable
@@ -368,34 +346,33 @@ public  final class Dealer extends
 
     // Construct using com.grpclelarn.models.Dealer.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
+
     }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
-    }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       internalGetMutableModel().clear();
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
       return com.grpclelarn.models.DealerOuterClass.internal_static_common_Dealer_descriptor;
     }
 
+    @java.lang.Override
     public com.grpclelarn.models.Dealer getDefaultInstanceForType() {
       return com.grpclelarn.models.Dealer.getDefaultInstance();
     }
 
+    @java.lang.Override
     public com.grpclelarn.models.Dealer build() {
       com.grpclelarn.models.Dealer result = buildPartial();
       if (!result.isInitialized()) {
@@ -404,6 +381,7 @@ public  final class Dealer extends
       return result;
     }
 
+    @java.lang.Override
     public com.grpclelarn.models.Dealer buildPartial() {
       com.grpclelarn.models.Dealer result = new com.grpclelarn.models.Dealer(this);
       int from_bitField0_ = bitField0_;
@@ -413,32 +391,39 @@ public  final class Dealer extends
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        Object value) {
-      return (Builder) super.setField(field, value);
+        java.lang.Object value) {
+      return super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+        int index, java.lang.Object value) {
+      return super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+        java.lang.Object value) {
+      return super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.grpclelarn.models.Dealer) {
         return mergeFrom((com.grpclelarn.models.Dealer)other);
@@ -452,29 +437,53 @@ public  final class Dealer extends
       if (other == com.grpclelarn.models.Dealer.getDefaultInstance()) return this;
       internalGetMutableModel().mergeFrom(
           other.internalGetModel());
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.grpclelarn.models.Dealer parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.MapEntry<java.lang.Integer, com.grpclelarn.models.Car>
+              model__ = input.readMessage(
+                  ModelDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableModel().getMutableMap().put(
+                  model__.getKey(), model__.getValue());
+              break;
+            } // case 10
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.grpclelarn.models.Dealer) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -509,6 +518,7 @@ public  final class Dealer extends
      * <code>map&lt;int32, .common.Car&gt; model = 1;</code>
      */
 
+    @java.lang.Override
     public boolean containsModel(
         int key) {
       
@@ -517,6 +527,7 @@ public  final class Dealer extends
     /**
      * Use {@link #getModelMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.Integer, com.grpclelarn.models.Car> getModel() {
       return getModelMap();
@@ -524,6 +535,7 @@ public  final class Dealer extends
     /**
      * <code>map&lt;int32, .common.Car&gt; model = 1;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.Integer, com.grpclelarn.models.Car> getModelMap() {
       return internalGetModel().getMap();
@@ -531,6 +543,7 @@ public  final class Dealer extends
     /**
      * <code>map&lt;int32, .common.Car&gt; model = 1;</code>
      */
+    @java.lang.Override
 
     public com.grpclelarn.models.Car getModelOrDefault(
         int key,
@@ -543,6 +556,7 @@ public  final class Dealer extends
     /**
      * <code>map&lt;int32, .common.Car&gt; model = 1;</code>
      */
+    @java.lang.Override
 
     public com.grpclelarn.models.Car getModelOrThrow(
         int key) {
@@ -586,7 +600,10 @@ public  final class Dealer extends
         int key,
         com.grpclelarn.models.Car value) {
       
-      if (value == null) { throw new java.lang.NullPointerException(); }
+      if (value == null) {
+  throw new NullPointerException("map value");
+}
+
       internalGetMutableModel().getMutableMap()
           .put(key, value);
       return this;
@@ -601,14 +618,16 @@ public  final class Dealer extends
           .putAll(values);
       return this;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return this;
+      return super.setUnknownFields(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return this;
+      return super.mergeUnknownFields(unknownFields);
     }
 
 
@@ -627,11 +646,23 @@ public  final class Dealer extends
 
   private static final com.google.protobuf.Parser<Dealer>
       PARSER = new com.google.protobuf.AbstractParser<Dealer>() {
+    @java.lang.Override
     public Dealer parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Dealer(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 
@@ -644,6 +675,7 @@ public  final class Dealer extends
     return PARSER;
   }
 
+  @java.lang.Override
   public com.grpclelarn.models.Dealer getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

@@ -34,20 +34,12 @@ public final class PersonOuterClass {
       "dress\022\030\n\003car\030\004 \003(\0132\013.common.CarB\031\n\025com.g" +
       "rpclelarn.modelsP\001b\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.grpclelarn.models.AddressOuterClass.getDescriptor(),
           com.grpclelarn.models.CarOuterClass.getDescriptor(),
-        }, assigner);
+        });
     internal_static_Person_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_Person_fieldAccessorTable = new

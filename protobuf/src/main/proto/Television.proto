@@ -24,3 +24,12 @@ enum Type{
 }
 
 //name is irrelevant match the tags to stay consistent between versions.
+
+//while deprecating fields  use reserved keyword
+// message Television{
+//     string brand=1;
+//      reserved 2;
+//      reserved "model"
+//     
+//     Type type=3;
+// }

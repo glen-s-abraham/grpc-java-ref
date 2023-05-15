@@ -6,97 +6,38 @@ package com.grpclelarn.models;
 /**
  * Protobuf type {@code Person}
  */
-public  final class Person extends
+public final class Person extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:Person)
     PersonOrBuilder {
+private static final long serialVersionUID = 0L;
   // Use Person.newBuilder() to construct.
   private Person(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
   private Person() {
     name_ = "";
-    age_ = 0;
     car_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new Person();
   }
 
   @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
-    return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
-  }
-  private Person(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    int mutable_bitField0_ = 0;
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          default: {
-            if (!input.skipField(tag)) {
-              done = true;
-            }
-            break;
-          }
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            name_ = s;
-            break;
-          }
-          case 16: {
-
-            age_ = input.readInt32();
-            break;
-          }
-          case 26: {
-            com.grpclelarn.models.Address.Builder subBuilder = null;
-            if (address_ != null) {
-              subBuilder = address_.toBuilder();
-            }
-            address_ = input.readMessage(com.grpclelarn.models.Address.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(address_);
-              address_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 34: {
-            if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-              car_ = new java.util.ArrayList<com.grpclelarn.models.Car>();
-              mutable_bitField0_ |= 0x00000008;
-            }
-            car_.add(
-                input.readMessage(com.grpclelarn.models.Car.parser(), extensionRegistry));
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-        car_ = java.util.Collections.unmodifiableList(car_);
-      }
-      makeExtensionsImmutable();
-    }
+    return this.unknownFields;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.grpclelarn.models.PersonOuterClass.internal_static_Person_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
     return com.grpclelarn.models.PersonOuterClass.internal_static_Person_fieldAccessorTable
@@ -104,7 +45,6 @@ public  final class Person extends
             com.grpclelarn.models.Person.class, com.grpclelarn.models.Person.Builder.class);
   }
 
-  private int bitField0_;
   public static final int NAME_FIELD_NUMBER = 1;
   private volatile java.lang.Object name_;
   /**
@@ -118,7 +58,9 @@ public  final class Person extends
    * </pre>
    *
    * <code>string name = 1;</code>
+   * @return The name.
    */
+  @java.lang.Override
   public java.lang.String getName() {
     java.lang.Object ref = name_;
     if (ref instanceof java.lang.String) {
@@ -142,7 +84,9 @@ public  final class Person extends
    * </pre>
    *
    * <code>string name = 1;</code>
+   * @return The bytes for name.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getNameBytes() {
     java.lang.Object ref = name_;
@@ -161,7 +105,9 @@ public  final class Person extends
   private int age_;
   /**
    * <code>int32 age = 2;</code>
+   * @return The age.
    */
+  @java.lang.Override
   public int getAge() {
     return age_;
   }
@@ -170,19 +116,24 @@ public  final class Person extends
   private com.grpclelarn.models.Address address_;
   /**
    * <code>.common.Address address = 3;</code>
+   * @return Whether the address field is set.
    */
+  @java.lang.Override
   public boolean hasAddress() {
     return address_ != null;
   }
   /**
    * <code>.common.Address address = 3;</code>
+   * @return The address.
    */
+  @java.lang.Override
   public com.grpclelarn.models.Address getAddress() {
     return address_ == null ? com.grpclelarn.models.Address.getDefaultInstance() : address_;
   }
   /**
    * <code>.common.Address address = 3;</code>
    */
+  @java.lang.Override
   public com.grpclelarn.models.AddressOrBuilder getAddressOrBuilder() {
     return getAddress();
   }
@@ -192,12 +143,14 @@ public  final class Person extends
   /**
    * <code>repeated .common.Car car = 4;</code>
    */
+  @java.lang.Override
   public java.util.List<com.grpclelarn.models.Car> getCarList() {
     return car_;
   }
   /**
    * <code>repeated .common.Car car = 4;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.grpclelarn.models.CarOrBuilder> 
       getCarOrBuilderList() {
     return car_;
@@ -205,24 +158,28 @@ public  final class Person extends
   /**
    * <code>repeated .common.Car car = 4;</code>
    */
+  @java.lang.Override
   public int getCarCount() {
     return car_.size();
   }
   /**
    * <code>repeated .common.Car car = 4;</code>
    */
+  @java.lang.Override
   public com.grpclelarn.models.Car getCar(int index) {
     return car_.get(index);
   }
   /**
    * <code>repeated .common.Car car = 4;</code>
    */
+  @java.lang.Override
   public com.grpclelarn.models.CarOrBuilder getCarOrBuilder(
       int index) {
     return car_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -232,9 +189,10 @@ public  final class Person extends
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
     }
     if (age_ != 0) {
@@ -246,14 +204,16 @@ public  final class Person extends
     for (int i = 0; i < car_.size(); i++) {
       output.writeMessage(4, car_.get(i));
     }
+    getUnknownFields().writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
 
     size = 0;
-    if (!getNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
     }
     if (age_ != 0) {
@@ -268,11 +228,11 @@ public  final class Person extends
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, car_.get(i));
     }
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
 
-  private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
@@ -283,19 +243,19 @@ public  final class Person extends
     }
     com.grpclelarn.models.Person other = (com.grpclelarn.models.Person) obj;
 
-    boolean result = true;
-    result = result && getName()
-        .equals(other.getName());
-    result = result && (getAge()
-        == other.getAge());
-    result = result && (hasAddress() == other.hasAddress());
+    if (!getName()
+        .equals(other.getName())) return false;
+    if (getAge()
+        != other.getAge()) return false;
+    if (hasAddress() != other.hasAddress()) return false;
     if (hasAddress()) {
-      result = result && getAddress()
-          .equals(other.getAddress());
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
     }
-    result = result && getCarList()
-        .equals(other.getCarList());
-    return result;
+    if (!getCarList()
+        .equals(other.getCarList())) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -317,7 +277,7 @@ public  final class Person extends
       hash = (37 * hash) + CAR_FIELD_NUMBER;
       hash = (53 * hash) + getCarList().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -392,6 +352,7 @@ public  final class Person extends
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -399,6 +360,7 @@ public  final class Person extends
   public static Builder newBuilder(com.grpclelarn.models.Person prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -422,6 +384,7 @@ public  final class Person extends
       return com.grpclelarn.models.PersonOuterClass.internal_static_Person_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.grpclelarn.models.PersonOuterClass.internal_static_Person_fieldAccessorTable
@@ -431,20 +394,15 @@ public  final class Person extends
 
     // Construct using com.grpclelarn.models.Person.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
+
     }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getCarFieldBuilder();
-      }
-    }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       name_ = "";
@@ -459,22 +417,26 @@ public  final class Person extends
       }
       if (carBuilder_ == null) {
         car_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
       } else {
+        car_ = null;
         carBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
       return com.grpclelarn.models.PersonOuterClass.internal_static_Person_descriptor;
     }
 
+    @java.lang.Override
     public com.grpclelarn.models.Person getDefaultInstanceForType() {
       return com.grpclelarn.models.Person.getDefaultInstance();
     }
 
+    @java.lang.Override
     public com.grpclelarn.models.Person build() {
       com.grpclelarn.models.Person result = buildPartial();
       if (!result.isInitialized()) {
@@ -483,10 +445,10 @@ public  final class Person extends
       return result;
     }
 
+    @java.lang.Override
     public com.grpclelarn.models.Person buildPartial() {
       com.grpclelarn.models.Person result = new com.grpclelarn.models.Person(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.name_ = name_;
       result.age_ = age_;
       if (addressBuilder_ == null) {
@@ -495,45 +457,51 @@ public  final class Person extends
         result.address_ = addressBuilder_.build();
       }
       if (carBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           car_ = java.util.Collections.unmodifiableList(car_);
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.car_ = car_;
       } else {
         result.car_ = carBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        Object value) {
-      return (Builder) super.setField(field, value);
+        java.lang.Object value) {
+      return super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+        int index, java.lang.Object value) {
+      return super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+        java.lang.Object value) {
+      return super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.grpclelarn.models.Person) {
         return mergeFrom((com.grpclelarn.models.Person)other);
@@ -559,7 +527,7 @@ public  final class Person extends
         if (!other.car_.isEmpty()) {
           if (car_.isEmpty()) {
             car_ = other.car_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureCarIsMutable();
             car_.addAll(other.car_);
@@ -572,7 +540,7 @@ public  final class Person extends
             carBuilder_.dispose();
             carBuilder_ = null;
             car_ = other.car_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000001);
             carBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getCarFieldBuilder() : null;
@@ -581,29 +549,75 @@ public  final class Person extends
           }
         }
       }
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.grpclelarn.models.Person parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              name_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 10
+            case 16: {
+              age_ = input.readInt32();
+
+              break;
+            } // case 16
+            case 26: {
+              input.readMessage(
+                  getAddressFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 26
+            case 34: {
+              com.grpclelarn.models.Car m =
+                  input.readMessage(
+                      com.grpclelarn.models.Car.parser(),
+                      extensionRegistry);
+              if (carBuilder_ == null) {
+                ensureCarIsMutable();
+                car_.add(m);
+              } else {
+                carBuilder_.addMessage(m);
+              }
+              break;
+            } // case 34
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.grpclelarn.models.Person) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -620,6 +634,7 @@ public  final class Person extends
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The name.
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -644,6 +659,7 @@ public  final class Person extends
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -669,6 +685,8 @@ public  final class Person extends
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @param value The name to set.
+     * @return This builder for chaining.
      */
     public Builder setName(
         java.lang.String value) {
@@ -691,6 +709,7 @@ public  final class Person extends
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearName() {
       
@@ -709,6 +728,8 @@ public  final class Person extends
      * </pre>
      *
      * <code>string name = 1;</code>
+     * @param value The bytes for name to set.
+     * @return This builder for chaining.
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
@@ -725,12 +746,16 @@ public  final class Person extends
     private int age_ ;
     /**
      * <code>int32 age = 2;</code>
+     * @return The age.
      */
+    @java.lang.Override
     public int getAge() {
       return age_;
     }
     /**
      * <code>int32 age = 2;</code>
+     * @param value The age to set.
+     * @return This builder for chaining.
      */
     public Builder setAge(int value) {
       
@@ -740,6 +765,7 @@ public  final class Person extends
     }
     /**
      * <code>int32 age = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAge() {
       
@@ -748,17 +774,19 @@ public  final class Person extends
       return this;
     }
 
-    private com.grpclelarn.models.Address address_ = null;
+    private com.grpclelarn.models.Address address_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.grpclelarn.models.Address, com.grpclelarn.models.Address.Builder, com.grpclelarn.models.AddressOrBuilder> addressBuilder_;
     /**
      * <code>.common.Address address = 3;</code>
+     * @return Whether the address field is set.
      */
     public boolean hasAddress() {
       return addressBuilder_ != null || address_ != null;
     }
     /**
      * <code>.common.Address address = 3;</code>
+     * @return The address.
      */
     public com.grpclelarn.models.Address getAddress() {
       if (addressBuilder_ == null) {
@@ -868,9 +896,9 @@ public  final class Person extends
     private java.util.List<com.grpclelarn.models.Car> car_ =
       java.util.Collections.emptyList();
     private void ensureCarIsMutable() {
-      if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         car_ = new java.util.ArrayList<com.grpclelarn.models.Car>(car_);
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -1020,7 +1048,7 @@ public  final class Person extends
     public Builder clearCar() {
       if (carBuilder_ == null) {
         car_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         carBuilder_.clear();
@@ -1097,21 +1125,23 @@ public  final class Person extends
         carBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.grpclelarn.models.Car, com.grpclelarn.models.Car.Builder, com.grpclelarn.models.CarOrBuilder>(
                 car_,
-                ((bitField0_ & 0x00000008) == 0x00000008),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         car_ = null;
       }
       return carBuilder_;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return this;
+      return super.setUnknownFields(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return this;
+      return super.mergeUnknownFields(unknownFields);
     }
 
 
@@ -1130,11 +1160,23 @@ public  final class Person extends
 
   private static final com.google.protobuf.Parser<Person>
       PARSER = new com.google.protobuf.AbstractParser<Person>() {
+    @java.lang.Override
     public Person parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Person(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 
@@ -1147,6 +1189,7 @@ public  final class Person extends
     return PARSER;
   }
 
+  @java.lang.Override
   public com.grpclelarn.models.Person getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

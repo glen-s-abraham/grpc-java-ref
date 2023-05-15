@@ -9,35 +9,42 @@ public interface CarOrBuilder extends
 
   /**
    * <code>string make = 1;</code>
+   * @return The make.
    */
   java.lang.String getMake();
   /**
    * <code>string make = 1;</code>
+   * @return The bytes for make.
    */
   com.google.protobuf.ByteString
       getMakeBytes();
 
   /**
    * <code>string model = 2;</code>
+   * @return The model.
    */
   java.lang.String getModel();
   /**
    * <code>string model = 2;</code>
+   * @return The bytes for model.
    */
   com.google.protobuf.ByteString
       getModelBytes();
 
   /**
    * <code>int32 year = 3;</code>
+   * @return The year.
    */
   int getYear();
 
   /**
    * <code>.common.BodyStyles body_style = 4;</code>
+   * @return The enum numeric value on the wire for bodyStyle.
    */
   int getBodyStyleValue();
   /**
    * <code>.common.BodyStyles body_style = 4;</code>
+   * @return The bodyStyle.
    */
   com.grpclelarn.models.BodyStyles getBodyStyle();
 }

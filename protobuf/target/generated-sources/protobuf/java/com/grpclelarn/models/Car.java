@@ -6,10 +6,11 @@ package com.grpclelarn.models;
 /**
  * Protobuf type {@code common.Car}
  */
-public  final class Car extends
+public final class Car extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:common.Car)
     CarOrBuilder {
+private static final long serialVersionUID = 0L;
   // Use Car.newBuilder() to construct.
   private Car(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
@@ -17,74 +18,27 @@ public  final class Car extends
   private Car() {
     make_ = "";
     model_ = "";
-    year_ = 0;
     bodyStyle_ = 0;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new Car();
   }
 
   @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
-    return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
-  }
-  private Car(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    int mutable_bitField0_ = 0;
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          default: {
-            if (!input.skipField(tag)) {
-              done = true;
-            }
-            break;
-          }
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            make_ = s;
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            model_ = s;
-            break;
-          }
-          case 24: {
-
-            year_ = input.readInt32();
-            break;
-          }
-          case 32: {
-            int rawValue = input.readEnum();
-
-            bodyStyle_ = rawValue;
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      makeExtensionsImmutable();
-    }
+    return this.unknownFields;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.grpclelarn.models.CarOuterClass.internal_static_common_Car_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
     return com.grpclelarn.models.CarOuterClass.internal_static_common_Car_fieldAccessorTable
@@ -96,7 +50,9 @@ public  final class Car extends
   private volatile java.lang.Object make_;
   /**
    * <code>string make = 1;</code>
+   * @return The make.
    */
+  @java.lang.Override
   public java.lang.String getMake() {
     java.lang.Object ref = make_;
     if (ref instanceof java.lang.String) {
@@ -111,7 +67,9 @@ public  final class Car extends
   }
   /**
    * <code>string make = 1;</code>
+   * @return The bytes for make.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getMakeBytes() {
     java.lang.Object ref = make_;
@@ -130,7 +88,9 @@ public  final class Car extends
   private volatile java.lang.Object model_;
   /**
    * <code>string model = 2;</code>
+   * @return The model.
    */
+  @java.lang.Override
   public java.lang.String getModel() {
     java.lang.Object ref = model_;
     if (ref instanceof java.lang.String) {
@@ -145,7 +105,9 @@ public  final class Car extends
   }
   /**
    * <code>string model = 2;</code>
+   * @return The bytes for model.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getModelBytes() {
     java.lang.Object ref = model_;
@@ -164,7 +126,9 @@ public  final class Car extends
   private int year_;
   /**
    * <code>int32 year = 3;</code>
+   * @return The year.
    */
+  @java.lang.Override
   public int getYear() {
     return year_;
   }
@@ -173,19 +137,23 @@ public  final class Car extends
   private int bodyStyle_;
   /**
    * <code>.common.BodyStyles body_style = 4;</code>
+   * @return The enum numeric value on the wire for bodyStyle.
    */
-  public int getBodyStyleValue() {
+  @java.lang.Override public int getBodyStyleValue() {
     return bodyStyle_;
   }
   /**
    * <code>.common.BodyStyles body_style = 4;</code>
+   * @return The bodyStyle.
    */
-  public com.grpclelarn.models.BodyStyles getBodyStyle() {
+  @java.lang.Override public com.grpclelarn.models.BodyStyles getBodyStyle() {
+    @SuppressWarnings("deprecation")
     com.grpclelarn.models.BodyStyles result = com.grpclelarn.models.BodyStyles.valueOf(bodyStyle_);
     return result == null ? com.grpclelarn.models.BodyStyles.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -195,12 +163,13 @@ public  final class Car extends
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getMakeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(make_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, make_);
     }
-    if (!getModelBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(model_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, model_);
     }
     if (year_ != 0) {
@@ -209,17 +178,19 @@ public  final class Car extends
     if (bodyStyle_ != com.grpclelarn.models.BodyStyles.UNKOWN.getNumber()) {
       output.writeEnum(4, bodyStyle_);
     }
+    getUnknownFields().writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
 
     size = 0;
-    if (!getMakeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(make_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, make_);
     }
-    if (!getModelBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(model_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, model_);
     }
     if (year_ != 0) {
@@ -230,11 +201,11 @@ public  final class Car extends
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(4, bodyStyle_);
     }
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
 
-  private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
@@ -245,15 +216,15 @@ public  final class Car extends
     }
     com.grpclelarn.models.Car other = (com.grpclelarn.models.Car) obj;
 
-    boolean result = true;
-    result = result && getMake()
-        .equals(other.getMake());
-    result = result && getModel()
-        .equals(other.getModel());
-    result = result && (getYear()
-        == other.getYear());
-    result = result && bodyStyle_ == other.bodyStyle_;
-    return result;
+    if (!getMake()
+        .equals(other.getMake())) return false;
+    if (!getModel()
+        .equals(other.getModel())) return false;
+    if (getYear()
+        != other.getYear()) return false;
+    if (bodyStyle_ != other.bodyStyle_) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -271,7 +242,7 @@ public  final class Car extends
     hash = (53 * hash) + getYear();
     hash = (37 * hash) + BODY_STYLE_FIELD_NUMBER;
     hash = (53 * hash) + bodyStyle_;
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -346,6 +317,7 @@ public  final class Car extends
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -353,6 +325,7 @@ public  final class Car extends
   public static Builder newBuilder(com.grpclelarn.models.Car prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -376,6 +349,7 @@ public  final class Car extends
       return com.grpclelarn.models.CarOuterClass.internal_static_common_Car_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.grpclelarn.models.CarOuterClass.internal_static_common_Car_fieldAccessorTable
@@ -385,19 +359,15 @@ public  final class Car extends
 
     // Construct using com.grpclelarn.models.Car.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
+
     }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
-    }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       make_ = "";
@@ -411,15 +381,18 @@ public  final class Car extends
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
       return com.grpclelarn.models.CarOuterClass.internal_static_common_Car_descriptor;
     }
 
+    @java.lang.Override
     public com.grpclelarn.models.Car getDefaultInstanceForType() {
       return com.grpclelarn.models.Car.getDefaultInstance();
     }
 
+    @java.lang.Override
     public com.grpclelarn.models.Car build() {
       com.grpclelarn.models.Car result = buildPartial();
       if (!result.isInitialized()) {
@@ -428,6 +401,7 @@ public  final class Car extends
       return result;
     }
 
+    @java.lang.Override
     public com.grpclelarn.models.Car buildPartial() {
       com.grpclelarn.models.Car result = new com.grpclelarn.models.Car(this);
       result.make_ = make_;
@@ -438,32 +412,39 @@ public  final class Car extends
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        Object value) {
-      return (Builder) super.setField(field, value);
+        java.lang.Object value) {
+      return super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+        int index, java.lang.Object value) {
+      return super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+        java.lang.Object value) {
+      return super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.grpclelarn.models.Car) {
         return mergeFrom((com.grpclelarn.models.Car)other);
@@ -489,35 +470,72 @@ public  final class Car extends
       if (other.bodyStyle_ != 0) {
         setBodyStyleValue(other.getBodyStyleValue());
       }
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.grpclelarn.models.Car parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              make_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 10
+            case 18: {
+              model_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 18
+            case 24: {
+              year_ = input.readInt32();
+
+              break;
+            } // case 24
+            case 32: {
+              bodyStyle_ = input.readEnum();
+
+              break;
+            } // case 32
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.grpclelarn.models.Car) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
 
     private java.lang.Object make_ = "";
     /**
      * <code>string make = 1;</code>
+     * @return The make.
      */
     public java.lang.String getMake() {
       java.lang.Object ref = make_;
@@ -533,6 +551,7 @@ public  final class Car extends
     }
     /**
      * <code>string make = 1;</code>
+     * @return The bytes for make.
      */
     public com.google.protobuf.ByteString
         getMakeBytes() {
@@ -549,6 +568,8 @@ public  final class Car extends
     }
     /**
      * <code>string make = 1;</code>
+     * @param value The make to set.
+     * @return This builder for chaining.
      */
     public Builder setMake(
         java.lang.String value) {
@@ -562,6 +583,7 @@ public  final class Car extends
     }
     /**
      * <code>string make = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearMake() {
       
@@ -571,6 +593,8 @@ public  final class Car extends
     }
     /**
      * <code>string make = 1;</code>
+     * @param value The bytes for make to set.
+     * @return This builder for chaining.
      */
     public Builder setMakeBytes(
         com.google.protobuf.ByteString value) {
@@ -587,6 +611,7 @@ public  final class Car extends
     private java.lang.Object model_ = "";
     /**
      * <code>string model = 2;</code>
+     * @return The model.
      */
     public java.lang.String getModel() {
       java.lang.Object ref = model_;
@@ -602,6 +627,7 @@ public  final class Car extends
     }
     /**
      * <code>string model = 2;</code>
+     * @return The bytes for model.
      */
     public com.google.protobuf.ByteString
         getModelBytes() {
@@ -618,6 +644,8 @@ public  final class Car extends
     }
     /**
      * <code>string model = 2;</code>
+     * @param value The model to set.
+     * @return This builder for chaining.
      */
     public Builder setModel(
         java.lang.String value) {
@@ -631,6 +659,7 @@ public  final class Car extends
     }
     /**
      * <code>string model = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearModel() {
       
@@ -640,6 +669,8 @@ public  final class Car extends
     }
     /**
      * <code>string model = 2;</code>
+     * @param value The bytes for model to set.
+     * @return This builder for chaining.
      */
     public Builder setModelBytes(
         com.google.protobuf.ByteString value) {
@@ -656,12 +687,16 @@ public  final class Car extends
     private int year_ ;
     /**
      * <code>int32 year = 3;</code>
+     * @return The year.
      */
+    @java.lang.Override
     public int getYear() {
       return year_;
     }
     /**
      * <code>int32 year = 3;</code>
+     * @param value The year to set.
+     * @return This builder for chaining.
      */
     public Builder setYear(int value) {
       
@@ -671,6 +706,7 @@ public  final class Car extends
     }
     /**
      * <code>int32 year = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearYear() {
       
@@ -682,27 +718,36 @@ public  final class Car extends
     private int bodyStyle_ = 0;
     /**
      * <code>.common.BodyStyles body_style = 4;</code>
+     * @return The enum numeric value on the wire for bodyStyle.
      */
-    public int getBodyStyleValue() {
+    @java.lang.Override public int getBodyStyleValue() {
       return bodyStyle_;
     }
     /**
      * <code>.common.BodyStyles body_style = 4;</code>
+     * @param value The enum numeric value on the wire for bodyStyle to set.
+     * @return This builder for chaining.
      */
     public Builder setBodyStyleValue(int value) {
+      
       bodyStyle_ = value;
       onChanged();
       return this;
     }
     /**
      * <code>.common.BodyStyles body_style = 4;</code>
+     * @return The bodyStyle.
      */
+    @java.lang.Override
     public com.grpclelarn.models.BodyStyles getBodyStyle() {
+      @SuppressWarnings("deprecation")
       com.grpclelarn.models.BodyStyles result = com.grpclelarn.models.BodyStyles.valueOf(bodyStyle_);
       return result == null ? com.grpclelarn.models.BodyStyles.UNRECOGNIZED : result;
     }
     /**
      * <code>.common.BodyStyles body_style = 4;</code>
+     * @param value The bodyStyle to set.
+     * @return This builder for chaining.
      */
     public Builder setBodyStyle(com.grpclelarn.models.BodyStyles value) {
       if (value == null) {
@@ -715,6 +760,7 @@ public  final class Car extends
     }
     /**
      * <code>.common.BodyStyles body_style = 4;</code>
+     * @return This builder for chaining.
      */
     public Builder clearBodyStyle() {
       
@@ -722,14 +768,16 @@ public  final class Car extends
       onChanged();
       return this;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return this;
+      return super.setUnknownFields(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return this;
+      return super.mergeUnknownFields(unknownFields);
     }
 
 
@@ -748,11 +796,23 @@ public  final class Car extends
 
   private static final com.google.protobuf.Parser<Car>
       PARSER = new com.google.protobuf.AbstractParser<Car>() {
+    @java.lang.Override
     public Car parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Car(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 
@@ -765,6 +825,7 @@ public  final class Car extends
     return PARSER;
   }
 
+  @java.lang.Override
   public com.grpclelarn.models.Car getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

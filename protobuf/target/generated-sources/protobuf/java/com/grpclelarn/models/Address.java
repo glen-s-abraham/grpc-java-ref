@@ -6,78 +6,38 @@ package com.grpclelarn.models;
 /**
  * Protobuf type {@code common.Address}
  */
-public  final class Address extends
+public final class Address extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:common.Address)
     AddressOrBuilder {
+private static final long serialVersionUID = 0L;
   // Use Address.newBuilder() to construct.
   private Address(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
   private Address() {
-    postbox_ = 0;
     street_ = "";
     city_ = "";
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new Address();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
-    return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
-  }
-  private Address(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    int mutable_bitField0_ = 0;
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          default: {
-            if (!input.skipField(tag)) {
-              done = true;
-            }
-            break;
-          }
-          case 8: {
-
-            postbox_ = input.readInt32();
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            street_ = s;
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            city_ = s;
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      makeExtensionsImmutable();
-    }
+    return this.unknownFields;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.grpclelarn.models.AddressOuterClass.internal_static_common_Address_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
     return com.grpclelarn.models.AddressOuterClass.internal_static_common_Address_fieldAccessorTable
@@ -89,7 +49,9 @@ public  final class Address extends
   private int postbox_;
   /**
    * <code>int32 postbox = 1;</code>
+   * @return The postbox.
    */
+  @java.lang.Override
   public int getPostbox() {
     return postbox_;
   }
@@ -98,7 +60,9 @@ public  final class Address extends
   private volatile java.lang.Object street_;
   /**
    * <code>string street = 2;</code>
+   * @return The street.
    */
+  @java.lang.Override
   public java.lang.String getStreet() {
     java.lang.Object ref = street_;
     if (ref instanceof java.lang.String) {
@@ -113,7 +77,9 @@ public  final class Address extends
   }
   /**
    * <code>string street = 2;</code>
+   * @return The bytes for street.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getStreetBytes() {
     java.lang.Object ref = street_;
@@ -132,7 +98,9 @@ public  final class Address extends
   private volatile java.lang.Object city_;
   /**
    * <code>string city = 3;</code>
+   * @return The city.
    */
+  @java.lang.Override
   public java.lang.String getCity() {
     java.lang.Object ref = city_;
     if (ref instanceof java.lang.String) {
@@ -147,7 +115,9 @@ public  final class Address extends
   }
   /**
    * <code>string city = 3;</code>
+   * @return The bytes for city.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getCityBytes() {
     java.lang.Object ref = city_;
@@ -163,6 +133,7 @@ public  final class Address extends
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -172,19 +143,22 @@ public  final class Address extends
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (postbox_ != 0) {
       output.writeInt32(1, postbox_);
     }
-    if (!getStreetBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(street_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, street_);
     }
-    if (!getCityBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(city_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, city_);
     }
+    getUnknownFields().writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -194,17 +168,17 @@ public  final class Address extends
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(1, postbox_);
     }
-    if (!getStreetBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(street_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, street_);
     }
-    if (!getCityBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(city_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, city_);
     }
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
 
-  private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
@@ -215,14 +189,14 @@ public  final class Address extends
     }
     com.grpclelarn.models.Address other = (com.grpclelarn.models.Address) obj;
 
-    boolean result = true;
-    result = result && (getPostbox()
-        == other.getPostbox());
-    result = result && getStreet()
-        .equals(other.getStreet());
-    result = result && getCity()
-        .equals(other.getCity());
-    return result;
+    if (getPostbox()
+        != other.getPostbox()) return false;
+    if (!getStreet()
+        .equals(other.getStreet())) return false;
+    if (!getCity()
+        .equals(other.getCity())) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -238,7 +212,7 @@ public  final class Address extends
     hash = (53 * hash) + getStreet().hashCode();
     hash = (37 * hash) + CITY_FIELD_NUMBER;
     hash = (53 * hash) + getCity().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -313,6 +287,7 @@ public  final class Address extends
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -320,6 +295,7 @@ public  final class Address extends
   public static Builder newBuilder(com.grpclelarn.models.Address prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -343,6 +319,7 @@ public  final class Address extends
       return com.grpclelarn.models.AddressOuterClass.internal_static_common_Address_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.grpclelarn.models.AddressOuterClass.internal_static_common_Address_fieldAccessorTable
@@ -352,19 +329,15 @@ public  final class Address extends
 
     // Construct using com.grpclelarn.models.Address.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
+
     }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
-    }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       postbox_ = 0;
@@ -376,15 +349,18 @@ public  final class Address extends
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
       return com.grpclelarn.models.AddressOuterClass.internal_static_common_Address_descriptor;
     }
 
+    @java.lang.Override
     public com.grpclelarn.models.Address getDefaultInstanceForType() {
       return com.grpclelarn.models.Address.getDefaultInstance();
     }
 
+    @java.lang.Override
     public com.grpclelarn.models.Address build() {
       com.grpclelarn.models.Address result = buildPartial();
       if (!result.isInitialized()) {
@@ -393,6 +369,7 @@ public  final class Address extends
       return result;
     }
 
+    @java.lang.Override
     public com.grpclelarn.models.Address buildPartial() {
       com.grpclelarn.models.Address result = new com.grpclelarn.models.Address(this);
       result.postbox_ = postbox_;
@@ -402,32 +379,39 @@ public  final class Address extends
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        Object value) {
-      return (Builder) super.setField(field, value);
+        java.lang.Object value) {
+      return super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+        int index, java.lang.Object value) {
+      return super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+        java.lang.Object value) {
+      return super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.grpclelarn.models.Address) {
         return mergeFrom((com.grpclelarn.models.Address)other);
@@ -450,41 +434,76 @@ public  final class Address extends
         city_ = other.city_;
         onChanged();
       }
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.grpclelarn.models.Address parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              postbox_ = input.readInt32();
+
+              break;
+            } // case 8
+            case 18: {
+              street_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 18
+            case 26: {
+              city_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 26
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.grpclelarn.models.Address) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
 
     private int postbox_ ;
     /**
      * <code>int32 postbox = 1;</code>
+     * @return The postbox.
      */
+    @java.lang.Override
     public int getPostbox() {
       return postbox_;
     }
     /**
      * <code>int32 postbox = 1;</code>
+     * @param value The postbox to set.
+     * @return This builder for chaining.
      */
     public Builder setPostbox(int value) {
       
@@ -494,6 +513,7 @@ public  final class Address extends
     }
     /**
      * <code>int32 postbox = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearPostbox() {
       
@@ -505,6 +525,7 @@ public  final class Address extends
     private java.lang.Object street_ = "";
     /**
      * <code>string street = 2;</code>
+     * @return The street.
      */
     public java.lang.String getStreet() {
       java.lang.Object ref = street_;
@@ -520,6 +541,7 @@ public  final class Address extends
     }
     /**
      * <code>string street = 2;</code>
+     * @return The bytes for street.
      */
     public com.google.protobuf.ByteString
         getStreetBytes() {
@@ -536,6 +558,8 @@ public  final class Address extends
     }
     /**
      * <code>string street = 2;</code>
+     * @param value The street to set.
+     * @return This builder for chaining.
      */
     public Builder setStreet(
         java.lang.String value) {
@@ -549,6 +573,7 @@ public  final class Address extends
     }
     /**
      * <code>string street = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearStreet() {
       
@@ -558,6 +583,8 @@ public  final class Address extends
     }
     /**
      * <code>string street = 2;</code>
+     * @param value The bytes for street to set.
+     * @return This builder for chaining.
      */
     public Builder setStreetBytes(
         com.google.protobuf.ByteString value) {
@@ -574,6 +601,7 @@ public  final class Address extends
     private java.lang.Object city_ = "";
     /**
      * <code>string city = 3;</code>
+     * @return The city.
      */
     public java.lang.String getCity() {
       java.lang.Object ref = city_;
@@ -589,6 +617,7 @@ public  final class Address extends
     }
     /**
      * <code>string city = 3;</code>
+     * @return The bytes for city.
      */
     public com.google.protobuf.ByteString
         getCityBytes() {
@@ -605,6 +634,8 @@ public  final class Address extends
     }
     /**
      * <code>string city = 3;</code>
+     * @param value The city to set.
+     * @return This builder for chaining.
      */
     public Builder setCity(
         java.lang.String value) {
@@ -618,6 +649,7 @@ public  final class Address extends
     }
     /**
      * <code>string city = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearCity() {
       
@@ -627,6 +659,8 @@ public  final class Address extends
     }
     /**
      * <code>string city = 3;</code>
+     * @param value The bytes for city to set.
+     * @return This builder for chaining.
      */
     public Builder setCityBytes(
         com.google.protobuf.ByteString value) {
@@ -639,14 +673,16 @@ public  final class Address extends
       onChanged();
       return this;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return this;
+      return super.setUnknownFields(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return this;
+      return super.mergeUnknownFields(unknownFields);
     }
 
 
@@ -665,11 +701,23 @@ public  final class Address extends
 
   private static final com.google.protobuf.Parser<Address>
       PARSER = new com.google.protobuf.AbstractParser<Address>() {
+    @java.lang.Override
     public Address parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Address(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 
@@ -682,6 +730,7 @@ public  final class Address extends
     return PARSER;
   }
 
+  @java.lang.Override
   public com.grpclelarn.models.Address getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

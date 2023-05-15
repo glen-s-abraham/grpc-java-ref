@@ -18,6 +18,7 @@ public interface PersonOrBuilder extends
    * </pre>
    *
    * <code>string name = 1;</code>
+   * @return The name.
    */
   java.lang.String getName();
   /**
@@ -31,21 +32,25 @@ public interface PersonOrBuilder extends
    * </pre>
    *
    * <code>string name = 1;</code>
+   * @return The bytes for name.
    */
   com.google.protobuf.ByteString
       getNameBytes();
 
   /**
    * <code>int32 age = 2;</code>
+   * @return The age.
    */
   int getAge();
 
   /**
    * <code>.common.Address address = 3;</code>
+   * @return Whether the address field is set.
    */
   boolean hasAddress();
   /**
    * <code>.common.Address address = 3;</code>
+   * @return The address.
    */
   com.grpclelarn.models.Address getAddress();
   /**
