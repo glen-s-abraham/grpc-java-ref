@@ -8,10 +8,28 @@ public interface PersonOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   *1-15 - 1 bytes - use for frequently used fields.
+   *16-2047 - 2 bytes - use for not that frequent fields.
+   *1 is smallest
+   *2^29-1
+   *19000-19999 -reserved
+   *Do not change field number once it's in use
+   * </pre>
+   *
    * <code>string name = 1;</code>
    */
   java.lang.String getName();
   /**
+   * <pre>
+   *1-15 - 1 bytes - use for frequently used fields.
+   *16-2047 - 2 bytes - use for not that frequent fields.
+   *1 is smallest
+   *2^29-1
+   *19000-19999 -reserved
+   *Do not change field number once it's in use
+   * </pre>
+   *
    * <code>string name = 1;</code>
    */
   com.google.protobuf.ByteString

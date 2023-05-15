@@ -108,6 +108,15 @@ public  final class Person extends
   public static final int NAME_FIELD_NUMBER = 1;
   private volatile java.lang.Object name_;
   /**
+   * <pre>
+   *1-15 - 1 bytes - use for frequently used fields.
+   *16-2047 - 2 bytes - use for not that frequent fields.
+   *1 is smallest
+   *2^29-1
+   *19000-19999 -reserved
+   *Do not change field number once it's in use
+   * </pre>
+   *
    * <code>string name = 1;</code>
    */
   public java.lang.String getName() {
@@ -123,6 +132,15 @@ public  final class Person extends
     }
   }
   /**
+   * <pre>
+   *1-15 - 1 bytes - use for frequently used fields.
+   *16-2047 - 2 bytes - use for not that frequent fields.
+   *1 is smallest
+   *2^29-1
+   *19000-19999 -reserved
+   *Do not change field number once it's in use
+   * </pre>
+   *
    * <code>string name = 1;</code>
    */
   public com.google.protobuf.ByteString
@@ -592,6 +610,15 @@ public  final class Person extends
 
     private java.lang.Object name_ = "";
     /**
+     * <pre>
+     *1-15 - 1 bytes - use for frequently used fields.
+     *16-2047 - 2 bytes - use for not that frequent fields.
+     *1 is smallest
+     *2^29-1
+     *19000-19999 -reserved
+     *Do not change field number once it's in use
+     * </pre>
+     *
      * <code>string name = 1;</code>
      */
     public java.lang.String getName() {
@@ -607,6 +634,15 @@ public  final class Person extends
       }
     }
     /**
+     * <pre>
+     *1-15 - 1 bytes - use for frequently used fields.
+     *16-2047 - 2 bytes - use for not that frequent fields.
+     *1 is smallest
+     *2^29-1
+     *19000-19999 -reserved
+     *Do not change field number once it's in use
+     * </pre>
+     *
      * <code>string name = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -623,6 +659,15 @@ public  final class Person extends
       }
     }
     /**
+     * <pre>
+     *1-15 - 1 bytes - use for frequently used fields.
+     *16-2047 - 2 bytes - use for not that frequent fields.
+     *1 is smallest
+     *2^29-1
+     *19000-19999 -reserved
+     *Do not change field number once it's in use
+     * </pre>
+     *
      * <code>string name = 1;</code>
      */
     public Builder setName(
@@ -636,6 +681,15 @@ public  final class Person extends
       return this;
     }
     /**
+     * <pre>
+     *1-15 - 1 bytes - use for frequently used fields.
+     *16-2047 - 2 bytes - use for not that frequent fields.
+     *1 is smallest
+     *2^29-1
+     *19000-19999 -reserved
+     *Do not change field number once it's in use
+     * </pre>
+     *
      * <code>string name = 1;</code>
      */
     public Builder clearName() {
@@ -645,6 +699,15 @@ public  final class Person extends
       return this;
     }
     /**
+     * <pre>
+     *1-15 - 1 bytes - use for frequently used fields.
+     *16-2047 - 2 bytes - use for not that frequent fields.
+     *1 is smallest
+     *2^29-1
+     *19000-19999 -reserved
+     *Do not change field number once it's in use
+     * </pre>
+     *
      * <code>string name = 1;</code>
      */
     public Builder setNameBytes(
