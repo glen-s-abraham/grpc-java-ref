@@ -1,8 +1,10 @@
 package com.grpclearn.server;
 
 import com.grpclearn.datastore.AccountDatabase;
+import com.grpclearn.datastore.StreamingDepositReq;
 import com.grpclearn.models.Balance;
 import com.grpclearn.models.BalanceCheckRequest;
+import com.grpclearn.models.DepositRequest;
 import com.grpclearn.models.Money;
 import com.grpclearn.models.WithdrawRequest;
 import com.grpclearn.models.BankServiceGrpc.BankServiceImplBase;
@@ -45,5 +47,10 @@ public class BankService extends BankServiceImplBase{
 		
 		responseObserver.onCompleted();
 		
+	}
+	
+	@Override
+	public StreamObserver<DepositRequest> cashDeposit(StreamObserver<Balance> responseObserver) {
+		return new StreamingDepositReq(responseObserver);
 	}
 }

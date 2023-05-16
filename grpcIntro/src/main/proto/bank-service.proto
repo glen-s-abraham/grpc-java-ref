@@ -21,12 +21,20 @@ message Money{
     int32 value=1;
 }
 
+message DepositRequest{
+    int32 account_number=1;
+    int32 amount=2;
+}
+
 service BankService{
     //unary
     rpc getBalance(BalanceCheckRequest) returns (Balance);
 
     //server side sreaming
     rpc withdraw(WithdrawRequest) returns (stream Money);
+
+    //deposit client ctraming
+    rpc cashDeposit(stream DepositRequest) returns (Balance);
 
 }
 
