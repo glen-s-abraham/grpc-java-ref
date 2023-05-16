@@ -26,6 +26,8 @@ message DepositRequest{
     int32 amount=2;
 }
 
+
+
 service BankService{
     //unary
     rpc getBalance(BalanceCheckRequest) returns (Balance);
