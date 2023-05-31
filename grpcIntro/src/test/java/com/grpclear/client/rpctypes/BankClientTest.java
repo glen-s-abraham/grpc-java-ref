@@ -1,4 +1,4 @@
-package com.grpclear.client;
+package com.grpclear.client.rpctypes;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
